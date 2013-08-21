@@ -1,0 +1,234 @@
+@font-face {
+	font-family: 'Oxygen';
+	src: url('../font/Oxygen.woff');
+	font-style: normal;
+}
+
+* {margin: 0; padding: 0; outline: 0;}
+
+.clear {	clear: both;}
+
+body {
+	font-family: Oxygen, Helvetica, Arial, Verdana, sans-serif;
+	color: #fff;
+	font-size: 12px;
+	background:#bfbfbf;
+}
+
+.wrap {
+	/*background:url(../images/bg.png) top left repeat-x;*/
+	width: 100%;
+	z-index: 10;
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	overflow:hidden;
+	box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+	display:block;
+	width:300px;
+	height:100px;
+	background-image:url(../img/logo.png);
+	background-repeat:none;
+	background-size:cover;
+	margin:0 auto;	
+}
+
+/* This is the selector i used for my menu, it needs to be set as position:absolute; */
+.navContainer {
+	position: absolute;
+	top: 100px;
+	z-index: 100;
+	width: 100%;
+	background: #4db5e8;
+	background: rgba(77,181,232,0.85);
+}
+
+
+ul.nav {
+	margin: 0 auto;
+	position: relative;
+	font-family: Oxygen, sans-serif;
+	list-style:none;
+}
+
+ul.nav li .subNavBtn {
+	display: none;
+	z-index: 101;
+	text-align:center;	
+	width:96%;
+	padding:5px 2%;
+	font-size: 1.5em;
+	color: #fff;
+	text-decoration:none;
+}
+ul.nav li .subNavBtn.active{	
+	display:block;
+}
+
+
+ul.nav  li.menu-arrow #arrow-up {
+	display:block; 	
+	height:13px;
+	width:20px;
+	background:url(../img/arrows2.png) center 0 no-repeat;
+	margin:6px auto;
+}
+ul.nav  li.menu-arrow #arrow-down {
+	display:block; 	
+	height:13px;
+	width:20px;
+	background:url(../img/arrows2.png) center -13px no-repeat;
+	margin:6px auto;
+}
+
+
+.sectionWrapper {
+	width: 100%;
+	z-index: 10;
+	position: relative;
+	margin: 0 auto;
+	padding: 0 0 20px 0;
+	min-height: 500px;
+}
+.sectionWrapper .inner h1 {
+	padding:20px;
+}
+
+/* SECTIONS */
+.sTop {
+	min-height: 630px;
+	background:#e5e5e5;
+}
+
+.s1 {	
+	background: #faeb12;
+}
+
+.s2 {
+	background: #37983c;
+}
+
+.s3 {
+	background: #F18D05;
+}
+
+.s4 {
+	background: #01A4A4;
+}
+
+.s5 {
+	background: #616161;
+}
+
+
+
+@media screen and (min-width:780px) {
+	.wrap {
+			/*background:url(../images/bg.png) top left repeat-x;*/
+			width: 100%;
+			max-width: 1140px;
+			min-width: 960px;
+			z-index: 10;
+			position: relative;
+			margin: 0 auto;
+			padding: 0;
+
+	}
+
+	.active {
+		background: #0066cc;
+	}
+	.clear {
+		clear: both;
+	}
+
+	.sectionWrapper {
+		width: 100%;
+		max-width: 1140px;
+		min-width: 960px;
+		z-index: 10;
+		position: relative;
+		margin: 0 auto;
+		padding: 0 0 20px 0;
+	}
+
+	ul.nav {
+		width: 960px;
+		margin: 0 auto;
+		position: relative;
+		min-height: 50px;
+		padding:30px 0;
+		font-size: 18px;
+		font-family: Oxygen, sans-serif;
+		font-weight: 300;
+		padding:30px 0;
+	}
+	ul.nav li {			
+		display:block;
+		text-align:center;	
+		width:100%;
+		padding:0;	
+	}
+
+
+	/* This is the selector i used for my menu, it needs to be set as position:absolute; */
+	.navContainer {
+		position: absolute;
+		top: 462px;
+		height: 50px;
+		z-index: 1000;
+		width: 100%;
+		max-width: 1140px;
+		min-width: 960px;
+	}
+
+	.navContainer ul.nav {
+		padding:0;
+		font-weight: 400;
+	}
+
+	ul.nav li .subNavBtn {
+		display: block;
+		height: 35px;
+		width: 12%;
+		float: left;
+		margin: 0px 0px 0 0;
+		text-decoration: none;
+		font-size: 14px;
+		padding: 15px 2% 0 2%;
+		text-align: center;
+		color: #fff;
+	}
+	ul.nav li .subNavBtn.active {
+		display: block;
+		height: 35px;
+		width: 12%;
+		float: left;
+		margin: 0px 0px 0 0;
+		text-decoration: none;
+		font-size: 14px;
+		padding: 15px 2% 0 2%;
+		text-align: center;
+		color: #fff;
+	}
+	
+	
+	ul.nav  li.menu-arrow #arrow-up {
+		display:none;
+	}
+	ul.nav  li.menu-arrow #arrow-down {
+		display:none;
+	}
+
+
+	#logo {
+		position:absolute;
+		top:0;
+		left:0;
+		margin:20px;
+		
+	}
+}
