@@ -2,12 +2,10 @@
 
 SMINT V1.0 by Robert McCracken
 SMINT V2.0 by robert McCracken with some awesome help from Ryan Clarke (@clarkieryan) and mcpacosy ‏(@mcpacosy)
-
-SMINT is my first dabble into jQuery plugins!
-
 http://www.outyear.co.uk/smint/
 
-If you like Smint, or have suggestions on how it could be improved, send me a tweet @rabmyself
+RESMINT V1.0 - A Responsive Smint by Frank Yin
+frank@warewoof.com
 
 */
 
