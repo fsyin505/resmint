@@ -16,7 +16,7 @@ frank@warewoof.com
 		optionLocs = new Array(),
 		scrollSpeed = 500,
 		lastScrollTop = 0,
-		menuHeight = 0,	// section buffer height
+		menuHeight = 0,	
 		stickyTop = 0,
 		scrollTop = 0
 		currentlyMobile = false;
@@ -27,16 +27,16 @@ frank@warewoof.com
 
 	function setMenuDisplay() {
 		var prevHeight = 0;
+		
 		menuHeight = $(".navContainer").height();
-		console.log(menuHeight);	
-	
+			
 		$('.navContainer a').each( function(index) {
 			//Fill the menu
 			var id = $(this).attr("id");
 								
 			optionLocs.push(Array(prevHeight, $("div."+id).height()+$("div."+id).position().top-menuHeight, id));
 			prevHeight = $("div."+id).height()+$("div."+id).position().top-menuHeight;
-			console.log('index[0]:'+optionLocs[index][0]+' index[1]:'+ optionLocs[index][1] + ' id:'+id);
+			//console.log('index[0]:'+optionLocs[index][0]+' index[1]:'+ optionLocs[index][1] + ' id:'+id);
 			// get initial top offset for the menu 
 			stickyTop = $('.navContainer').offset().top;	
 		});
@@ -51,11 +51,11 @@ frank@warewoof.com
 		var id = e.target.id;	
 		
 		
-		if (!$('div.'+id).length) { return }	// just to check if element exists
+		if (!$('div.'+id).length) { return }	// in case element doesn't exist
 		
 		var goTo =  $('div.'+ id).offset().top - menuHeight + 1;
 
-		console.log('goto: '+ goTo);
+		//console.log('goto: '+ goTo);
 		// Scroll the page to the desired position!
 		$("html, body").animate({ scrollTop: goTo }, scrollSpeed);
 	}
@@ -77,7 +77,6 @@ frank@warewoof.com
 			$('.navContainer').css({ 'position': 'fixed', 'top':0 });	
 		} else {
 			$('.navContainer').removeAttr('style');
-			//$('.navContainer').css({ 'position': 'absolute', 'top':stickyTop }).removeClass('fxd'); 
 		}   
 
 		//Check if the position is inside then change the menu
@@ -115,8 +114,7 @@ frank@warewoof.com
 					$(this).css('display','block');
 				});
 				$('.navContainer').addClass('open');
-			}
-			
+			}	
 			
 		} else {
 			navClick(e);
@@ -124,20 +122,14 @@ frank@warewoof.com
 	}
 	
 	$doc.on('ready', function () {
-		/* init navContainer */
 		
 		setMenuDisplay();
 
 		$('.navContainer').on('click', function(e){toggleMenuPanel(e)});
-		//$('.subNavBtn').on('click', function(e){navClick(e)});
-
 		
 		$win.scroll(function(e) {
 			navScroll(e);
-		});
-		$win.resize(function (e) {
-			navScroll(e);
-		});			
+		});		
 	});
 
 
