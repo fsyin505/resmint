@@ -3,7 +3,7 @@ resmint
 
 A Responsive Smint
 
-To run the demo, unzip the package, and launch index.html in a browser
+To run the demo, unzip the package, and launch index.html in a browser.  Or try it here: http://www.warewoof.com/projects/resmint/
 
 This demo is based off of Smint by Robert McCracken 
 http://www.outyear.co.uk/smint/
